@@ -12,8 +12,7 @@ def deriv(f, x, eps=1e-5):
 
 def deriv2(f, x, eps=1e-5):
     """Estimate the second derivative of f at x using a finite difference."""
-    # just replaced line below with Chris's code
-    return (deriv(f, x+eps, eps) - deriv(f, x, eps)) / eps
+    return (f(x + eps) - 2 * f(x) + f(x - eps)) / eps**2
 
 
 def optimize(x, f, tol=1e-6):
