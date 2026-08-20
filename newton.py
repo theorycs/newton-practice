@@ -17,7 +17,7 @@ def deriv2(f, x, eps=1e-5):
     return (f(x + eps) - 2 * f(x) + f(x - eps)) / eps**2
 
 
-def optimize(x, f, tol=1e-6, max_iter=100):
+def optimize(f, x, tol=1e-6, max_iter=100):
     """Find a local optimum of f using Newton's optimization method."""
 
     for _ in range(max_iter):
