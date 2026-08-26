@@ -32,7 +32,7 @@ def gradient(f, x):
     return g
 
 
-def optimize(x, f, tol=1e-6, max_iter=100):
+def optimize(f, x, tol=1e-6, max_iter=100):
     """Find a local optimum of a multivariate function using Newton's method."""
 
     x = np.asarray(x, dtype=float)
