@@ -18,42 +18,42 @@ The univariate case uses the first and second derivatives, while the multivariat
 ## Univariate Newton's Method
 
 ### Root Finding
-For a scalar function \(f(x)\), Newton's method finds a root by iteratively applying:
+For a scalar function $f(x)$, Newton's method finds a root by iteratively applying:
 
-\[
+$$
 x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}.
-\]
+$$
 
 The method uses the first derivative to approximate the function locally by its tangent line and iteratively improve the estimate of the root.
 
 ### Optimization
-Newton's method can also be applied to finding extrema of a scalar function. Since an extremum occurs where \(f'(x) = 0\), Newton's method can be applied to \(f'(x)\), giving the iteration:
+Newton's method can also be applied to finding extrema of a scalar function. Since an extremum occurs where $f'(x) = 0$, Newton's method can be applied to $f'(x)$, giving the iteration:
 
-\[
+$$
 x_{n+1} = x_n - \frac{f'(x_n)}{f''(x_n)}.
-\]
+$$
 
 Here, the second derivative provides the curvature information used to update the current estimate.
 
 ## Multivariate Newton's Method
 
 ### Root Finding
-For a system of nonlinear equations represented by a vector-valued function \(F(x) = 0\), the scalar derivative is replaced by the **Jacobian matrix** \(J_F(x)\). The Newton iteration becomes:
+For a system of nonlinear equations represented by a vector-valued function $F(x) = 0$, the scalar derivative is replaced by the **Jacobian matrix** $J_F(x)$. The Newton iteration becomes:
 
-\[
+$$
 x_{n+1} = x_n - J_F(x_n)^{-1}F(x_n).
-\]
+$$
 
 In practice, the corresponding linear system is solved directly rather than explicitly computing the matrix inverse.
 
 ### Optimization
-For a scalar function of several variables \(f(x)\), an extremum occurs where the **gradient** vanishes: \(\nabla f(x) = 0\). Applying Newton's method to this system gives:
+For a scalar function of several variables $f(x)$, an extremum occurs where the **gradient** vanishes: $\nabla f(x) = 0$. Applying Newton's method to this system gives:
 
-\[
+$$
 x_{n+1} = x_n - H_f(x_n)^{-1}\nabla f(x_n),
-\]
+$$
 
-where \(H_f(x)\) is the **Hessian matrix** of second derivatives. The gradient generalizes the first derivative, while the Hessian generalizes the second derivative and describes the local curvature of the function.
+where $H_f(x)$ is the **Hessian matrix** of second derivatives. The gradient generalizes the first derivative, while the Hessian generalizes the second derivative and describes the local curvature of the function.
 
 ## What This Project Covers
 
